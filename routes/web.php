@@ -113,6 +113,5 @@ Route::get('/user/profile', function() {
 Route::resource('photos', PhotoController::class)->only([
 'index', 'show'
 ]);
-Route::get('/greeting', function () {
-    return view('hello', ['name' => 'Andi']);
-    });
+Route::get('/greeting', [WelcomeController::class,
+'greeting']);
